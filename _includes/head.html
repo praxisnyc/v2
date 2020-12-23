@@ -23,7 +23,7 @@
 	{% endif %}
 	<!-- Open Graph / Facebook -->
 	<meta property="og:type" content="website">
-	<meta property="og:url" content="{{ site.url }}">
+	<meta property="og:url" content="{{ site.url }}{{ site.baseurl }}">
 	{%if page.title %}
 	<meta property="og:title" content={{ page.title }}>
 	{% endif %}
@@ -31,9 +31,9 @@
 	<meta property="og:description" content="{{ page.description }}">
 	{% endif %}
 	{%if page.image %}
-	<meta property="og:image" content={{ site.url }}/assets/images/{{ page.image }}> {% endif %} <!-- Twitter -->
+	<meta property="og:image" content={{'/assets/images/' | prepend: site.baseurl }}{{ page.image }}> {% endif %} <!-- Twitter -->
 	<meta property="twitter:card" content="summary_large_image">
-	<meta property="twitter:url" content="{{ site.url }}">
+	<meta property="twitter:url" content="{{ site.url }}{{ site.baseurl }}">
 	{%if page.title %}
 	<meta property="twitter:title" content={{ page.title }}>
 	{% endif %}
@@ -41,8 +41,8 @@
 	<meta property="twitter:description" content="{{ page.description }}">
 	{% endif %}
 	{%if page.cover %}
-	<meta property="twitter:image" content={{ site.url }}/assets/images/{{ page.cover }}> {% endif %} {%if page.open %}
-		<meta property="twitter:image" content={{ site.url }}/assets/images/{{ page.open }}> {% endif %} 
+	<meta property="twitter:image" content={{'/assets/images/' | prepend: site.baseurl }}{{ page.cover }}> {% endif %} {%if page.open %}
+		<meta property="twitter:image" content={{'/assets/images/' | prepend: site.baseurl }}{{ page.open }}> {% endif %} 
 		<link
 		rel="stylesheet" href="{{'/assets/main.css' | prepend: site.baseurl }}">
 
