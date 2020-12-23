@@ -7,6 +7,14 @@ $social: 110px;
 $transition: 300ms;
 $opacity: 0.8;
 
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+
 @mixin highlight(
   $bg: white, 
   $gap: 10px, 

@@ -4,15 +4,17 @@ html {
   scroll-behavior: smooth;
 }
 
-.wow {
-  @include fade(0, 50px, 0, $delay: 100ms);
-}
+
+  canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
 
 
 body {
   font-family: RenoMono;
-  @include tile(lines-up-a, grey, 6px);
-  background-attachment: fixed;
   counter-reset: counter;
 }
 
