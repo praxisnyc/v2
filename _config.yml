@@ -2,8 +2,8 @@ title: praxis
 email: praxis.nyc@protonmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Decolonize your attention
-baseurl: 'v2/'
-url: 'https://praxis.nyc/'
+baseurl: '/v2'
+url: 'https://praxis.nyc'
 twitter_username: nonlinear
 github_username: nonlinear
 destination: docs

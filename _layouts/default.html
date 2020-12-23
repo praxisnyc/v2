@@ -13,7 +13,7 @@ layout: default
 		<aside class="sidebar wow">
 			<div class="scroll">
 				<header class="brand">
-					<a href="/" class="logo">
+					<a href="{{'/'  | prepend: site.baseurl }}" class="logo">
 						{% include icons/logo.svg %}
 					</a>
 				</header>
@@ -34,7 +34,7 @@ layout: default
 			</div>
 			{%- endif -%}
 			{%- if page.cover -%}
-			<div class="cover wow" style="background-image: url(/assets/images/{{ page.cover }})">
+			<div class="cover wow" style="background-image: url({{'/assets/images/'  | prepend: site.baseurl }}{{ page.cover }})">
 				{%- if page.description -%}
 				<h2>{{ page.description }}</h2>
 				{%- endif -%}
@@ -50,10 +50,10 @@ layout: default
 	</div>
 	<a href="JavaScript:Void(0);" onclick="
     $('body').toggleClass('reveal')" class="reveal-trigger">menu</a>
-	<script src="{{'assets/vendor/jquery.min.js' | relative_url}}"></script>
-	<script src="{{'assets/vendor/popper.min.js' | relative_url}}"></script>
-	<script src="{{'assets/vendor/bootstrap.min.js' | relative_url}}"></script>
-	<script src="{{'assets/vendor/wow.min.js' | relative_url}}"></script>
+	<script src="{{'/assets/vendor/jquery.min.js' | prepend: site.baseurl }}"></script>
+	<script src="{{'/assets/vendor/popper.min.js' | prepend: site.baseurl }}"></script>
+	<script src="{{'/assets/vendor/bootstrap.min.js' | prepend: site.baseurl }}"></script>
+	<script src="{{'/assets/vendor/wow.min.js' | prepend: site.baseurl }}"></script>
 	<script>
   $(function () {
     $('[data-toggle="tooltip"]').tooltip()

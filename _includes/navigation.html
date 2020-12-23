@@ -7,8 +7,8 @@
       <ul>
         {% for post in site.categories.study %}
         {% if post.status contains "latest" %}
-        <li class="latest cover" style="background-image: url(/assets/images/{{ post.cover }})"> <a
-            href="{{ post.url }}">
+        <li class="latest cover" style="background-image: url({{'/assets/images/' | prepend: site.baseurl }}{{ post.cover }})"> <a
+            href="{{ post.url | prepend: site.baseurl }}">
             <span>Latest:</span>
             <span class="main">{{ post.title }}</span>
             <span class="slogan">{{ post.description }}</span>
@@ -16,8 +16,8 @@
         </li>
         {% endif %}
          {% if post.status contains "ongoing" %}
-        <li class="latest cover" style="background-image: url(/assets/images/{{ post.cover }})"> <a
-            href="{{ post.url }}">
+        <li class="latest cover" style="background-image: url({{'/assets/images/' | prepend: site.baseurl }}{{ post.cover }})"> <a
+            href="{{ post.url | prepend: site.baseurl }}">
             <span>Latest:</span>
             <span class="main">{{ post.title }}</span>
             <span class="slogan">{{ post.description }}</span>
@@ -30,7 +30,7 @@
         </li>
         {% for post in site.categories.study %}
         {% if post.status contains "previous" %}
-        <li class="previous"> <a href="{{ post.url }}">{{ post.title }}</a></li>
+        <li class="previous"> <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
         {% endif %}
         {% endfor %}
       </ul>
@@ -48,7 +48,7 @@
         <ul>
           {% for post in site.categories.slide %}
           {% if post.status contains "public" %}
-          <li><a href="{{ post.url }}" target="slide">
+          <li><a href="{{ post.url | prepend: site.baseurl }}" target="slide">
          {{ post.title }}
             <span class="description">{{ post.description }}</a></li>
           {% endif %}
@@ -80,7 +80,7 @@
         <ul>
           {% for post in site.categories.article %}
           {% if post.status contains "public" %}
-          <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+          <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
           {% endif %}
           {% endfor %}
         </ul>
@@ -97,7 +97,7 @@
         <ul>
           {% for post in site.categories.consulting %}
           {% if post.status contains "public" %}
-          <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+          <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
           {% endif %}
           {% endfor %}
         </ul>

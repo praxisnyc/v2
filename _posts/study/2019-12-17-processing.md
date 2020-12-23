@@ -20,7 +20,7 @@ permalink: /:slug/
   <section>
     <h3>Join:</h3>
       <a class="action" href="https://whereby.com/praxis_nyc">Wereby Room</a>
-  <a class="action" href="/assets/events/processing-night.ics">Add to calendar</a>
+  <a class="action" href="{{'/assets/events/processing-night.ics' | prepend: site.baseurl }}">Add to calendar</a>
 
   </section>
   <section>
@@ -54,7 +54,7 @@ permalink: /:slug/
     <ul class="syllabus">
       <li class="title">Sharing and publishing</li>
       <li class="meeting">Tuesday Jan 14, 7pm at <a href="https://www.google.com/maps?q=375+menahan+street" target="_blank">375 menahan Street</a></li>
-      <li class="action"> <a href="/assets/events/processing-3.ics">add to calendar</a></li>
+      <li class="action"> <a href="{{'/assets/events/processing-3.ics' | prepend: site.baseurl }}">add to calendar</a></li>
       <li>Homework: <a href='https://www.youtube.com/watch?v=c3TeLi6Ns1E&amp;list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA&amp;t=0s' target='_blank' class='url'>Shapes & Drawing (youtube)</a></li>
       <li>Homework: <a href='https://thecodingtrain.com/Tutorials/1-p5js-basics/1.3-basics-of-drawing.html' target='_blank' class='url'>basics of drawing</a></li>
       <li>Homework: <a href='https://thecodingtrain.com/Tutorials/2-variables/' target='_blank' class='url'>variables</a></li>
@@ -68,7 +68,7 @@ permalink: /:slug/
     <div class="counter"></div>
     <ul class="syllabus">
       <li class="meeting">Tuesday Jan 14, 7pm at <a href="https://www.google.com/maps?q=375+menahan+street" target="_blank">375 menahan Street</a></li>
-      <li class="action"> <a href="/assets/events/processing-4.ics">add to calendar</a></li>
+      <li class="action"> <a href="{{'/assets/events/processing-4.ics' | prepend: site.baseurl }}">add to calendar</a></li>
       <li>We're following <a href='keybase://team/praxis_nyc.processing/books/p5.js%20-%20All%20you%20need%20to%20know.pdf' target='_blank' class='url'>this tutorial</a></li>
       <li class="sig">(keybase link, you must be <a href="https://keybase.io/team/praxis_nyc.processing" target="_blank">a team member</a> to access it)</li>
       <li><a href="https://whereby.com/praxis_nyc">zoom link</a></li>
