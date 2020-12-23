@@ -6,6 +6,7 @@ baseurl: ''
 url: 'https://praxis.nyc/'
 twitter_username: nonlinear
 github_username: nonlinear
+destination: docs
 
 sass:
   load_paths:
