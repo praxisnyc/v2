@@ -372,51 +372,70 @@
 <script src="/v2/assets/vendor/p5.min.js"></script>
 
 <script>
-let x = [],
-  y = [],
-  segNum = 20,
-  segLength = 18;
+	// P5.js Code from Daniel Shiffman instructional <https://www.youtube.com/watch?v=BjoM9oKOAKY&t=542s>
 
-for (let i = 0; i < segNum; i++) {
-  x[i] = 0;
-  y[i] = 0;
-}
+var scl = 15;
+var xvec, yvec;
+var noiseInc = .1;
+var time = 0;
+var flowfield;
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
-  strokeWeight(9);
-  stroke(255, 100);
+       createCanvas(windowWidth, windowHeight);
+
+
 }
 
-function draw() {
-  background(200);
-  dragSegment(0, mouseX, mouseY);
-  for (let i = 0; i < x.length - 1; i++) {
-    dragSegment(i + 1, x[i], y[i]);
-  }
+function draw() { // Rotating Vectors
+       background(255);
+
+       FlowField();
+
+
 }
 
-function dragSegment(i, xin, yin) {
-  const dx = xin - x[i];
-  const dy = yin - y[i];
-  const angle = atan2(dy, dx);
-  x[i] = xin - cos(angle) * segLength;
-  y[i] = yin - sin(angle) * segLength;
-  segment(x[i], y[i], angle);
+function FlowField(){
+       xvec = floor((windowWidth+50) / scl);
+       yvec = floor((windowHeight+50) / scl);
+       flowfield = new Array(xvec * yvec);
+
+       var yNoise = 0;
+       for (var y = 0; y < yvec; y++) {
+              var xNoise = 0;
+              for (var x = 0; x < xvec; x++) {
+                     // var vecDirect = noise(xNoise, yNoise, time) * 2*(TWO_PI);
+                     var myMouse = createVector(mouseX,mouseY);
+                     var vecDirect = radians(45);
+                     var dir = p5.Vector.fromAngle(vecDirect);
+                     var index = x + y * xvec;
+                     flowfield[index] = dir;
+                     dir.setMag(3);
+                     xNoise += noiseInc;
+                     stroke(180);
+                     push();
+                     translate(x * scl, y * scl);
+                     rotate(dir.heading());
+                     line(0, 0, scl, 0);
+                     pop();
+              }
+              yNoise += noiseInc;
+              time += .001;
+       }
 }
 
-function segment(x, y, a) {
-  push();
-  translate(x, y);
-  rotate(a);
-  line(0, 0, segLength, 0);
-  pop();
+// 1 - criar um grid (parametrizável)
+// 2 - preencher grid com component (shape simples, ou SVG)
+// 3 - operação de rotacionar component
+// 4 - cálculo de ângulo entre posição qualquer e mouse pointer
+// 5 - rotação de component em função de ângulo
+// 6 - aplicar apenas dentro de radius
+
+
+
+function windowResized() {
+       resizeCanvas(windowWidth, windowHeight);
 }
-</script>
-<script>
-	function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
-}
+	  
 </script>
 </body>
 
