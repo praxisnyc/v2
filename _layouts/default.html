@@ -10,31 +10,22 @@ layout: default
 
 <body id="{%- if page.status -%}{{ page.status }}{%- endif -%}">
 	<div class="container">
-		<aside class="sidebar wow">
-			<div class="scroll">
-				<header class="brand">
+	
+				
+
+		
+		<article class="main">
+			{%- if page.title -%}
+			<header>
 					<a href="{{'/'  | prepend: site.baseurl }}" class="logo">
 						{% include icons/logo.svg %}
 					</a>
+					<p class="description">Decolonize<br>Your<br>Attention</p>
 				</header>
-				<p class="description">Decolonize<br>Your<br>Attention</p>
-				{% include navigation.html %}
-			</div>
-
-			<!-- <ul class="social">
-				<li><a href="#">Join our newsletter</a></li>
-				<li><a href="#">Become our patreon</a></li>
-				<li><a href="#">follow our instagram</a></li>
-			</ul> -->
-		</aside>
-		<article class="main">
-			{%- if page.title -%}
-			<div class="title wow">
-				<h1>{{ page.title }}</h1>
-			</div>
+						{% include navigation.html %}
 			{%- endif -%}
 			{%- if page.cover -%}
-			<div class="cover wow" style="background-image: url({{'/assets/images/'  | prepend: site.baseurl }}{{ page.cover }})">
+			<div class="cover" style="background-image: url({{'/assets/images/'  | prepend: site.baseurl }}{{ page.cover }})">
 				{%- if page.description -%}
 				<h2>{{ page.description }}</h2>
 				{%- endif -%}
