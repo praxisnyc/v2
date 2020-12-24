@@ -1,5 +1,12 @@
-@include font-face(RenoMono, $path: "./fonts/");
 
+@font-face {
+    font-family: 'hasklig-light';
+    src: url('./fonts/hasklig-light.woff2') format('woff2'),
+         url('./fonts/hasklig-light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
 html {
   scroll-behavior: smooth;
 }
@@ -14,12 +21,12 @@ html {
 
 
 body {
-  font-family: RenoMono;
+  font-family: hasklig-light;
   counter-reset: counter;
 }
 
 .popover-body {
-  font-family: RenoMono;
+  font-family: hasklig-light;
   a {
     display: block;
   }

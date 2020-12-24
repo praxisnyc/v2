@@ -7770,17 +7770,10 @@
     -o-transform-origin: center bottom;
     transform-origin: center bottom; } }
 @font-face {
-  font-family: RenoMono;
-  src: url("./fonts/RenoMono.eot");
-  src: url("./fonts/RenoMono.eot?#iefix") format("embedded-opentype"), url("./fonts/RenoMono.woff") format("woff"), url("./fonts/RenoMono.ttf") format("truetype"), url("./fonts/RenoMono.svg#RenoMono") format("svg");
+  font-family: 'hasklig-light';
+  src: url("./fonts/hasklig-light.woff2") format("woff2"), url("./fonts/hasklig-light.woff") format("woff");
   font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  text-transform: transform; }
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  @font-face {
-    font-family: RenoMono;
-    src: url("./fonts/RenoMono.svg#RenoMono") format("svg"); } }
+  font-style: normal; }
 html {
   scroll-behavior: smooth; }
 
@@ -7791,11 +7784,11 @@ canvas.p5Canvas {
   z-index: -1; }
 
 body {
-  font-family: RenoMono;
+  font-family: hasklig-light;
   counter-reset: counter; }
 
 .popover-body {
-  font-family: RenoMono; }
+  font-family: hasklig-light; }
   .popover-body a {
     display: block; }
 
@@ -8625,6 +8618,49 @@ a.action {
     -o-box-shadow: 0 3px 0px rgba(0, 0, 0, 0.15);
     box-shadow: 0 3px 0px rgba(0, 0, 0, 0.15); }
 
+/**
+ * Tabs
+ */
+.tabs {
+  display: flex;
+  flex-wrap: wrap; }
+
+.tabs label {
+  order: 1;
+  display: block;
+  padding: 1rem 2rem;
+  margin-right: 0.2rem;
+  cursor: pointer;
+  background: #90CAF9;
+  font-weight: bold;
+  transition: background ease 0.2s; }
+
+.tabs .tab {
+  order: 99;
+  flex-grow: 1;
+  width: 100%;
+  display: none;
+  padding: 1rem;
+  background: #fff; }
+
+.tabs input[type="radio"] {
+  display: none; }
+
+.tabs input[type="radio"]:checked + label {
+  background: #fff; }
+
+.tabs input[type="radio"]:checked + label + .tab {
+  display: block; }
+
+@media (max-width: 45em) {
+  .tabs .tab,
+  .tabs label {
+    order: initial; }
+
+  .tabs label {
+    width: 100%;
+    margin-right: 0;
+    margin-top: 0.2rem; } }
 html.slide body {
   background: none;
   background-image: url(/assets/images/praxis-bg.svg); }
