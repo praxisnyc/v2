@@ -12,8 +12,7 @@ html {
 }
 
 .container {
-	width: 600px;
-	margin: 0 auto;
+	max-width: 550px;
 }
 
  canvas.p5Canvas {
@@ -25,9 +24,9 @@ html {
 
 
 body {
-  font-family: hasklig-light;
+    font-family: hasklig-light;
+  @include tile(lines-up-a, grey, 6px);
   counter-reset: counter;
-  text-transform: uppercase;
 }
 
 p, li a {
@@ -41,6 +40,10 @@ p, li a {
   	height: 25px;
   	content: "";
   }
+}
+
+h1, h2, h3, h4 {
+  text-transform: uppercase;
 }
 
 a {
