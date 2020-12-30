@@ -25,15 +25,16 @@ html {
 
 body {
     font-family: hasklig-light;
-  @include tile(lines-up-a, grey, 6px);
+  background-image: url('../assets/images/bg.svg');
   counter-reset: counter;
+  color: $color-foreground;
 }
 
 p, li a {
-  background-color: white;
+  background-color: $color-background;
   display: inline;
-    box-shadow: 10px 0 0 white,
-    -10px 0 0 white;
+    box-shadow: 10px 0 0 $color-background,
+    -10px 0 0 $color-background;
     box-decoration-break: clone;
   & + &:before {
   	display: block;
@@ -47,5 +48,11 @@ h1, h2, h3, h4 {
 }
 
 a {
-	color: purple;
+	color: $color-accent;
+}
+
+header.header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: $gap;
 }

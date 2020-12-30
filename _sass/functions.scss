@@ -1,19 +1,15 @@
-$color-1: black;
-$color-2: purple;
-$color-slide: $color-1;
-$frame: 30px;
-$menu: 200px;
-$social: 110px;
-$transition: 300ms;
-$opacity: 0.8;
+$color-foreground: black;
+$color-background: white;
+$color-accent: purple;
 
-$grid-breakpoints: (
-  xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px
-) !default;
+$gap: 10px;
+$gap2: $gap * 2;
+$gap3: $gap * 3;
+$gap4: $gap * 4;
+$gap5: $gap * 5;
+$gap6: $gap * 6;
+$gap7: $gap * 7;
+
 
 @mixin highlight(
   $bg: white, 
@@ -77,4 +73,5 @@ $break: true
     }
   }
 }
+
 

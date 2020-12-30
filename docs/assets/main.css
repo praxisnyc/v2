@@ -15379,11 +15379,9 @@ canvas.p5Canvas {
 
 body {
   font-family: hasklig-light;
-  background-image: url("data:image/svg+xml;charset=utf8, %3Csvg width='36' height='36' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3Elines-up-a%3C/title%3E%3Cg fill='grey' fill-rule='nonzero'%3E%3Cpath d='M36.1 36H34l2.1-2.1zM0 2V-.1h2.1z'/%3E%3Cpath d='M0 2V-.1h2.1zM36 2.1V0h-2.1L0 33.9V36h2.1z'/%3E%3C/g%3E%3C/svg%3E");
-  position: relative;
-  z-index: 1;
-  background-size: 6px;
-  counter-reset: counter; }
+  background-image: url("../assets/images/bg.svg");
+  counter-reset: counter;
+  color: black; }
 
 p, li a {
   background-color: white;
@@ -15400,3 +15398,8 @@ h1, h2, h3, h4 {
 
 a {
   color: purple; }
+
+header.header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px; }
