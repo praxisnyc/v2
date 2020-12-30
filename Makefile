@@ -18,8 +18,8 @@ include-npm-deps:
 	cp -R node_modules/animatewithsass $(SCSS_VENDOR_DIR)animatewithsass
 
 
-build: install include-npm-deps
+build: install
 	$(JEKYLL) build
 
-serve: install include-npm-deps
+serve: install
 	JEKYLL_ENV=production $(JEKYLL) serve --livereload
