@@ -39,14 +39,17 @@ h1, h2, h3, h4 {
 }
 
 a:not(.neu):not(.logo) {
-  color: black;
+  color: $color-foreground;
   @include transition;
   @include highlight($color: rgba($color-accent, .15), $shadow: 5px, $block: false);
   &:hover {
-    color: black;
+    color: $color-foreground;
     text-decoration: none;
     @include highlight($color: rgba($color-accent, .3), $shadow: 5px, $block: false)
   }
+}
+sup {
+  margin-left: $gaphalf;
 }
 header.nav {
 
@@ -122,12 +125,20 @@ height: 62px;
     height: 20px;
     width: 20px;
     path {
-    fill: black;
+    fill: $color-foreground;
   }
   }
   &:hover {
     box-shadow: 5px -5px 8px rgba($color-accent, .3),
     -5px 5px 8px rgba($color-accent, .3);
+  }
+}
+
+span.notes {
+  @include transition;
+  color: $color-accent;
+  &:hover {
+    @include highlight($color: rgba($color-accent, .15), $shadow: 5px, $block: false);
   }
 }
 

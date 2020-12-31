@@ -9,6 +9,7 @@ $gap4: $gap * 4;
 $gap5: $gap * 5;
 $gap6: $gap * 6;
 $gap7: $gap * 7;
+$gaphalf: $gap / 2;
 
 @mixin highlight($color: $color-background, $shadow: 10px, $block: true, $the-gap: $gap2) {
     background-color: $color;

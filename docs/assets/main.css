@@ -15415,6 +15415,9 @@ a:not(.neu):not(.logo) {
     box-shadow: 5px 0 0 rgba(128, 0, 128, 0.3), -5px 0 0 rgba(128, 0, 128, 0.3);
     box-decoration-break: clone; }
 
+sup {
+  margin-left: 5px; }
+
 header.nav {
   border-bottom: solid 1px #ccc;
   margin: 30px 0; }
@@ -15494,6 +15497,19 @@ header.header {
       fill: black; }
   .neu:hover {
     box-shadow: 5px -5px 8px rgba(128, 0, 128, 0.3), -5px 5px 8px rgba(128, 0, 128, 0.3); }
+
+span.notes {
+  -webkit-transition: all 300ms ease-out;
+  -moz-transition: all 300ms ease-out;
+  -ms-transition: all 300ms ease-out;
+  -o-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+  color: purple; }
+  span.notes:hover {
+    background-color: rgba(128, 0, 128, 0.15);
+    display: inline;
+    box-shadow: 5px 0 0 rgba(128, 0, 128, 0.15), -5px 0 0 rgba(128, 0, 128, 0.15);
+    box-decoration-break: clone; }
 
 ol.notes {
   padding-left: 0;
