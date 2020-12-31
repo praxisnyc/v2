@@ -15,10 +15,13 @@ layout: default
 			<a href="{{'/'  | prepend: site.baseurl }}" class="logo">
 					{% include icons/logo.svg %}
 				</a>
-				<h1 class="title">{{ site.title }}</h1>
+				<div class="more">
+					<h1 class="title">{{ site.title }}</h1>
 			<h2 class="slogan">{{ site.description }}</h2>
-			 <a data-toggle="collapse" href="#menu" class="collapse-trigger">
-	    Panel 1 title
+				</div>
+			 <a data-toggle="collapse" class="neu" href="#menu" class="collapse-trigger">
+	    <span class="off">{% include radix-icons/hamburger-menu.svg %}</span>
+	    <span class="on">{% include radix-icons/cross-1.svg %}</span>
 	  </a>
 		</header>
 	 

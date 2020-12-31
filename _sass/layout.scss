@@ -1,10 +1,10 @@
 
 @font-face {
-    font-family: 'hasklig-light';
-    src: url('./fonts/hasklig-light.woff2') format('woff2'),
-         url('./fonts/hasklig-light.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'hasklig-light';
+  src: url('./fonts/hasklig-light.woff2') format('woff2'),
+  url('./fonts/hasklig-light.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 
 }
 html {
@@ -15,32 +15,23 @@ html {
 	max-width: 550px;
 }
 
- canvas.p5Canvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -1;
+canvas.p5Canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 
 body {
-    font-family: hasklig-light;
+  font-family: hasklig-light;
   background-image: url('../assets/images/bg.svg');
   counter-reset: counter;
   color: $color-foreground;
 }
 
 p, li a {
-  background-color: $color-background;
-  display: inline;
-    box-shadow: 10px 0 0 $color-background,
-    -10px 0 0 $color-background;
-    box-decoration-break: clone;
-  & + &:before {
-  	display: block;
-  	height: 25px;
-  	content: "";
-  }
+@include stroke;
 }
 
 h1, h2, h3, h4 {
@@ -53,6 +44,78 @@ a {
 
 header.header {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: $gap;
+  grid-template-columns: auto 1fr auto;
+
+  justify-content: center;
+  align-items: center;
+  margin: $gap3 0;
+  .logo {
+    background: white;
+    padding: 5px;
+    padding-right: 12px;
+
+    svg {
+width: 62px;
+height: 62px;
+@include radius(3px);
+    path {
+      @include transition;
+    }
+    }
+    &:hover {
+      svg path {
+        fill: purple;
+      }
+    }
+  }
+    h1, h2 {
+@include stroke;
+  }
+  h1 {
+    font-size: 40px;
+  }
+  h2 {
+    font-size: 18px;
+    &:before {
+    content: "";
+    display: block;
+    margin-top: -5px;
+  }
+  }
+}
+
+
+.neu {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;    
+  border-radius: 50%;
+  background: black;
+  @include transition;
+  box-shadow: 5px 5px 8px rgba(purple, .2),
+  -5px -5px 8px rgba(purple, .2);
+  span.on {
+    display: none;
+  }
+  &[aria-expanded="true"] {
+      span.off {
+    display: none;
+  }
+    span.on {
+    display: inline;
+  }
+  }
+  svg {
+    width: 20px;
+    height: 20px;
+    path {
+    fill: white;
+  }
+  }
+  &:hover {
+    box-shadow: 5px -5px 8px rgba(purple, .3),
+    -5px 5px 8px rgba(purple, .3);
+  }
 }
