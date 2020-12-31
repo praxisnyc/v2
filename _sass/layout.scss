@@ -31,24 +31,35 @@ body {
 }
 
 p, li a {
-@include stroke;
+@include highlight;
 }
 
 h1, h2, h3, h4 {
   text-transform: uppercase;
 }
 
-a {
-	color: $color-accent;
+a:not(.neu):not(.logo) {
+  color: black;
+  @include transition;
+  @include highlight($color: rgba($color-accent, .15), $shadow: 5px, $block: false);
+  &:hover {
+    color: black;
+    text-decoration: none;
+    @include highlight($color: rgba($color-accent, .3), $shadow: 5px, $block: false)
+  }
 }
+header.nav {
 
+  border-bottom: solid 1px #ccc;
+  margin: $gap3 0;
+}
 header.header {
   display: grid;
   grid-template-columns: auto 1fr auto;
-
+width: 100%;
   justify-content: center;
   align-items: center;
-  margin: $gap3 0;
+  padding-bottom: $gap3;
   .logo {
     background: white;
     padding: 5px;
@@ -64,12 +75,12 @@ height: 62px;
     }
     &:hover {
       svg path {
-        fill: purple;
+        fill: $color-accent;
       }
     }
   }
     h1, h2 {
-@include stroke;
+@include highlight;
   }
   h1 {
     font-size: 40px;
@@ -92,10 +103,10 @@ height: 62px;
   width: 30px;
   height: 30px;    
   border-radius: 50%;
-  background: black;
+  background: #ccc;
   @include transition;
-  box-shadow: 5px 5px 8px rgba(purple, .2),
-  -5px -5px 8px rgba(purple, .2);
+  box-shadow: 5px 5px 8px rgba($color-accent, .2),
+  -5px -5px 8px rgba($color-accent, .2);
   span.on {
     display: none;
   }
@@ -108,14 +119,28 @@ height: 62px;
   }
   }
   svg {
-    width: 20px;
     height: 20px;
+    width: 20px;
     path {
-    fill: white;
+    fill: black;
   }
   }
   &:hover {
-    box-shadow: 5px -5px 8px rgba(purple, .3),
-    -5px 5px 8px rgba(purple, .3);
+    box-shadow: 5px -5px 8px rgba($color-accent, .3),
+    -5px 5px 8px rgba($color-accent, .3);
+  }
+}
+
+ol.notes {
+  padding-left: 0;
+  margin-top: $gap3;
+  border-top: solid 1px #ccc;
+  padding-top: $gap3;
+  font-size: 85%;
+  li {
+    padding-bottom: $gap;
+    span {
+    @include highlight;
+  }
   }
 }

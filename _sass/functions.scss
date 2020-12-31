@@ -10,20 +10,22 @@ $gap5: $gap * 5;
 $gap6: $gap * 6;
 $gap7: $gap * 7;
 
-@mixin stroke {
-    background-color: $color-background;
+@mixin highlight($color: $color-background, $shadow: 10px, $block: true, $the-gap: $gap2) {
+    background-color: $color;
   display: inline;
-  box-shadow: 10px 0 0 $color-background,
-  -10px 0 0 $color-background;
+  box-shadow: $shadow 0 0 $color,
+  -$shadow 0 0 $color;
   box-decoration-break: clone;
-  & + &:before {
+ @if $block == true {
+    & + &:before {
     display: block;
-    height: 25px;
+    height: $the-gap;
     content: "";
   }
+ }
 }
 
-@mixin highlight(
+@mixin highlight-old(
   $bg: white, 
   $gap: 10px, 
 $spacing: 20px, 

@@ -11,21 +11,21 @@ layout: default
 <body id="{%- if page.status -%}{{ page.status }}{%- endif -%}">
 
 	<div class="container">
+		<header class="nav">
 		<header class="header">
-			<a href="{{'/'  | prepend: site.baseurl }}" class="logo">
+				<a href="{{'/'  | prepend: site.baseurl }}" class="logo">
 					{% include icons/logo.svg %}
 				</a>
 				<div class="more">
 					<h1 class="title">{{ site.title }}</h1>
 			<h2 class="slogan">{{ site.description }}</h2>
 				</div>
-			 <a data-toggle="collapse" class="neu" href="#menu" class="collapse-trigger">
+			 <a data-toggle="collapse" href="#menu" class="neu collapse-trigger">
 	    <span class="off">{% include radix-icons/hamburger-menu.svg %}</span>
 	    <span class="on">{% include radix-icons/cross-1.svg %}</span>
 	  </a>
 		</header>
-	 
-	  <div id="menu" class="collapse in">
+  <nav id="menu" class="collapse in">
 	    <ul>
 {% for category in site.categories %}
   <li><a name="{{ category | first }}">{{ category | first }}</a>
@@ -37,7 +37,11 @@ layout: default
   </li>
 {% endfor %}
 </ul>
-	  </div>
+	  </nav>
+		</header>
+			
+	 
+	  
 		{{ content }}
 	</div>
 

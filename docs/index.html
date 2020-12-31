@@ -44,8 +44,9 @@
 <body id="">
 
 	<div class="container">
+		<header class="nav">
 		<header class="header">
-			<a href="/v2/" class="logo">
+				<a href="/v2/" class="logo">
 					<svg width="131" height="131" viewBox="0 0 131 131" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M131 0H0V131H131V0ZM71.2412 18.6969C68.5887 18.024 65.824 17.6875 62.9473 17.6875H24.959H24.959L24.959 88H44.3438V61.7305H62.9473C65.0631 61.7305 67.1465 61.4863 69.1973 60.998C71.2806 60.5098 73.25 59.8099 75.1055 58.8984C76.9609 57.987 78.6699 56.8639 80.2324 55.5293C81.7949 54.1947 83.1458 52.6973 84.2852 51.0371C85.457 49.377 86.3685 47.554 87.0195 45.5684C87.6706 43.5501 87.9961 41.4017 87.9961 39.123C87.9961 35.5098 87.2962 32.3685 85.8965 29.6992C85.8111 29.5303 85.7238 29.3633 85.6346 29.1981C84.2976 26.7205 82.5457 24.6577 80.3789 23.0098C80.09 22.786 79.7955 22.5693 79.4954 22.3598C77.3948 20.8929 75.02 19.7749 72.3711 19.0059C71.9967 18.896 71.6201 18.793 71.2412 18.6969ZM54.5488 24.5723C59.1712 24.5723 62.6217 25.8743 64.9004 28.4785C67.2116 31.0501 68.3672 34.5983 68.3672 39.123C68.3672 41.4342 68.1068 43.5664 67.5859 45.5195C67.5534 45.6395 67.5197 45.7586 67.4848 45.8768C66.9622 47.6487 66.1821 49.206 65.1445 50.5488C65.0062 50.7278 64.8627 50.902 64.7142 51.0714C63.6746 52.257 62.3858 53.2059 60.8477 53.918C60.632 54.0156 60.4105 54.1072 60.1832 54.1926C58.5917 54.7907 56.7136 55.0898 54.5488 55.0898H44.3438V24.5723H54.5488ZM85.0469 88.1172L102.391 113H89.1875L78.1328 97.1797L66.8438 113H57.7031L74.6953 92.2188L57.7031 67.8828H70.9062L81.6094 83.1953L93.25 67.8828H102.391L85.0469 88.1172Z" fill="black"/>
 </svg>
@@ -55,7 +56,7 @@
 					<h1 class="title">praxis</h1>
 			<h2 class="slogan">tools to decolonize your attention</h2>
 				</div>
-			 <a data-toggle="collapse" class="neu" href="#menu" class="collapse-trigger">
+			 <a data-toggle="collapse" href="#menu" class="neu collapse-trigger">
 	    <span class="off"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
   <path
     fill-rule="evenodd"
@@ -76,8 +77,7 @@
 </span>
 	  </a>
 		</header>
-	 
-	  <div id="menu" class="collapse in">
+  <nav id="menu" class="collapse in">
 	    <ul>
 
   <li><a name="article">article</a>
@@ -165,22 +165,55 @@
   </li>
 
 </ul>
-	  </div>
-		<ul id="tab" class="nav nav-tabs">
-  <li class="active"><a href="#english" data-toggle="tab">In English</a></li>
-  <li><a href="#portugues" data-toggle="tab">Em Português</a></li>
+	  </nav>
+		</header>
+			
+	 
+	  
+		<a href="#" class="neu">
+      <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path
+    fill-rule="evenodd"
+    clip-rule="evenodd"
+    d="M7.49996 1.80002C4.35194 1.80002 1.79996 4.352 1.79996 7.50002C1.79996 10.648 4.35194 13.2 7.49996 13.2C10.648 13.2 13.2 10.648 13.2 7.50002C13.2 4.352 10.648 1.80002 7.49996 1.80002ZM0.899963 7.50002C0.899963 3.85494 3.85488 0.900024 7.49996 0.900024C11.145 0.900024 14.1 3.85494 14.1 7.50002C14.1 11.1451 11.145 14.1 7.49996 14.1C3.85488 14.1 0.899963 11.1451 0.899963 7.50002Z"
+    fill="currentColor"
+  />
+  <path
+    fill-rule="evenodd"
+    clip-rule="evenodd"
+    d="M13.4999 7.89998H1.49994V7.09998H13.4999V7.89998Z"
+    fill="currentColor"
+  />
+  <path
+    fill-rule="evenodd"
+    clip-rule="evenodd"
+    d="M7.09991 13.5V1.5H7.89991V13.5H7.09991zM10.375 7.49998C10.375 5.32724 9.59364 3.17778 8.06183 1.75656L8.53793 1.24341C10.2396 2.82218 11.075 5.17273 11.075 7.49998 11.075 9.82724 10.2396 12.1778 8.53793 13.7566L8.06183 13.2434C9.59364 11.8222 10.375 9.67273 10.375 7.49998zM3.99969 7.5C3.99969 5.17611 4.80786 2.82678 6.45768 1.24719L6.94177 1.75281C5.4582 3.17323 4.69969 5.32389 4.69969 7.5 4.6997 9.67611 5.45822 11.8268 6.94179 13.2472L6.45769 13.7528C4.80788 12.1732 3.9997 9.8239 3.99969 7.5z"
+    fill="currentColor"
+  />
+  <path
+    fill-rule="evenodd"
+    clip-rule="evenodd"
+    d="M7.49996 3.95801C9.66928 3.95801 11.8753 4.35915 13.3706 5.19448 13.5394 5.28875 13.5998 5.50197 13.5055 5.67073 13.4113 5.83948 13.198 5.89987 13.0293 5.8056 11.6794 5.05155 9.60799 4.65801 7.49996 4.65801 5.39192 4.65801 3.32052 5.05155 1.97064 5.8056 1.80188 5.89987 1.58866 5.83948 1.49439 5.67073 1.40013 5.50197 1.46051 5.28875 1.62927 5.19448 3.12466 4.35915 5.33063 3.95801 7.49996 3.95801zM7.49996 10.85C9.66928 10.85 11.8753 10.4488 13.3706 9.6135 13.5394 9.51924 13.5998 9.30601 13.5055 9.13726 13.4113 8.9685 13.198 8.90812 13.0293 9.00238 11.6794 9.75643 9.60799 10.15 7.49996 10.15 5.39192 10.15 3.32052 9.75643 1.97064 9.00239 1.80188 8.90812 1.58866 8.9685 1.49439 9.13726 1.40013 9.30601 1.46051 9.51924 1.62927 9.6135 3.12466 10.4488 5.33063 10.85 7.49996 10.85z"
+    fill="currentColor"
+  />
+</svg>
+</a>
+          <ul id='tab' class='nav nav-tabs'>
+  <li class='active'><a href='#english' data-toggle='tab'>In English</a></li>
+  <li><a href='#portugues' data-toggle='tab'>Em Português</a></li>
 </ul>
+
 <div id="myTabContent" class="tab-content">
   <div class="tab-pane in active" id="english">
      <p>We are a voluntary consulting group helping original peoples and peripheral communities establish <span class="notes">digital sovereignty<sup>1</sup></span> and evade <span class="notes">surveillance capitalism<sup>2</sup></span> through <span class="notes">rhizomatic technologies<sup>3</sup></span>.</p>
   <p>We solve the community specific issues, with research, adoption and security, and educating community members to maintain and expand their digital autonomy.</p>
   <p>We meet weekly, <a href='mailto:praxis.nyc@protonmail.com?subject=praxis'>contact us</a> if interested.</p>
     <ol class="notes">
-      <li>Indigenous data sovereignty is the right of a nation to govern the collection, ownership, and application of its own data. 
- <a href='https://cdn.auckland.ac.nz/assets/psych/about/our-research/documents/TMR%2BMāori%2BData%2BSovereignty%2BPrinciples%2BOct%2B2018.pdf' target='_blank'>Principles of Māori Data Sovereignty (PDF)</a></li>
- <li>Surveillance capitalism unilaterally claims human experience as free raw material for translation into behavioral data. <a href='https://en.wikipedia.org/wiki/Surveillance_capitalism' target='_blank'>Read more</a></li>
- <li>Rhizomatic organization opposes an arborescent (hierarchic, tree-like) conception of knowledge, working outside its dualist categories and binary choices.
-  <a href='https://en.wikipedia.org/wiki/Rhizome_(philosophy)' target='_blank'>Read more</a></li>
+      <li><span>Indigenous data sovereignty is the right of a nation to govern the collection, ownership, and application of its own data. 
+ <a href='https://cdn.auckland.ac.nz/assets/psych/about/our-research/documents/TMR%2BMāori%2BData%2BSovereignty%2BPrinciples%2BOct%2B2018.pdf' target='_blank'>Principles of Māori Data Sovereignty (PDF)</a></span></li>
+ <li><span>Surveillance capitalism unilaterally claims human experience as free raw material for translation into behavioral data. <a href='https://en.wikipedia.org/wiki/Surveillance_capitalism' target='_blank'>Read more</a></span></li>
+ <li><span>Rhizomatic organization opposes an arborescent (hierarchic, tree-like) conception of knowledge, working outside its dualist categories and binary choices.
+  <a href='https://en.wikipedia.org/wiki/Rhizome_(philosophy)' target='_blank'>Read more</a></span></li>
     </ol>
   </div>
   <div class="tab-pane" id="portugues">
@@ -190,10 +223,10 @@
 
 <p>Nos encontramos semanalmente, <a href='mailto:praxis.nyc@protonmail.com?subject=praxis'>contate-nos</a> se interessade.</p>
     <ol class="notes">
-      <li>A soberania dos dados indígenas é o direito dos povos indígenas de possuir, controlar, acessar e possuir dados que provêm deles e que se referem aos seus membros, sistemas de conhecimento, costumes ou territórios. <a href='https://www.scielo.br/scielo.php?script=sci_arttext&pid=S0102-311X2018001008001' target='_blank'>Saiba mais</a></li>
-      <li>O modelo econômico que usa os dados de usuários como matéria-prima para predição de comportamento por empresas de tecnologias. <a href='https://www.projetodraft.com/verbete-draft-o-que-e-capitalismo-de-vigilancia' target='_blank'>Saiba mais</a></li>
-      <li>A organização rizomática é um método para resistir a um modelo hierárquico que reflete uma estrutura social opressiva.
-  <a href='https://pt.wikipedia.org/wiki/Rizoma_(filosofia)' target='_blank'>Saiba mais</a></li>
+      <li><span>A soberania dos dados indígenas é o direito dos povos indígenas de possuir, controlar, acessar e possuir dados que provêm deles e que se referem aos seus membros, sistemas de conhecimento, costumes ou territórios. <a href='https://www.scielo.br/scielo.php?script=sci_arttext&pid=S0102-311X2018001008001' target='_blank'>Saiba mais</a></span></li>
+      <li><span>O modelo econômico que usa os dados de usuários como matéria-prima para predição de comportamento por empresas de tecnologias. <a href='https://www.projetodraft.com/verbete-draft-o-que-e-capitalismo-de-vigilancia' target='_blank'>Saiba mais</a></span></li>
+      <li><span>A organização rizomática é um método para resistir a um modelo hierárquico que reflete uma estrutura social opressiva.
+  <a href='https://pt.wikipedia.org/wiki/Rizoma_(filosofia)' target='_blank'>Saiba mais</a></span></li>
     </ol>
   </div>
 </div>
