@@ -776,6 +776,15 @@ let field;
 let shape;
 let shapeVertexNumber = 4;
 
+// todo: easing no radius (testar)
+// todo: return on pause
+// test: ver no no-touch
+
+function easeInOutQuad(x) {
+return x < 0.5 ? 2 * x * x : 1 - pow(-2 * x + 2, 2) / 2;
+
+}
+
 function setupField() {
   gridX = width/cellWidth;
   gridY = height/cellHeight;
