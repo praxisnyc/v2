@@ -15379,7 +15379,6 @@ canvas.p5Canvas {
 
 body {
   font-family: hasklig-light;
-  background-image: url("../assets/images/bg.svg");
   counter-reset: counter;
   color: black; }
 

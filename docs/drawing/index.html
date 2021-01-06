@@ -812,22 +812,21 @@
 				}
 			}, 300);
 		});
-		// let gridX = 30;
-let gridY = 30;
+		let gridX;
+let gridY;
 let radius = 200;
 let startAngle = 45;
 let startDelay = 10;
 let frame = 0;
-let cellWidth;
-let cellHeight;
+let cellWidth = 25;
+let cellHeight = 25;
 let field;
 let shape;
 let shapeVertexNumber = 4;
 
-function setup() {
-    createCanvas(windowWidth,windowHeight);
-    cellWidth = width/gridX;
-    cellHeight = height/gridY;
+function setupField() {
+  gridX = width/cellWidth;
+  gridY = height/cellHeight;
     field = []; // start the flow field
     for (let i = 0; i < gridX; i++) {
         field[i] = [];
@@ -839,6 +838,11 @@ function setup() {
     for (let i = 0; i < shapeVertexNumber; i++) {
         shape.push(createVector(random(cellWidth),random(cellHeight)));
     }
+}
+
+function setup() {
+    createCanvas(windowWidth,windowHeight);
+   setupField();
 
 }
 
@@ -870,13 +874,19 @@ function rotationReference() {
 }
 
 function drawShape() {
-    //line(cellWidth*0.1,cellHeight/2,cellWidth*0.9,cellHeight/2);
+    stroke(214);
+    strokeWeight(2);
+    line(cellWidth*0.1,cellHeight/2,cellWidth*0.9,cellHeight/2);
     //rect(cellWidth*0.1,cellHeight*.4,cellWidth*.8,cellHeight*.1); 
-    beginShape();
-    for (let i = 0; i < shape.length; i++) {
-        vertex(shape[i].x,shape[i].y);
-    }
-    endShape(CLOSE);
+    // beginShape();
+    // for (let i = 0; i < shape.length; i++) {
+    //     vertex(shape[i].x,shape[i].y);
+    // }
+    // endShape(CLOSE);
+}
+    function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+  setupField();
 }
 
 
